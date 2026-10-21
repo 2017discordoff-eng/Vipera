@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vipera – Navigue sans laisser de traces</title>
+<meta name="description" content="Vipera : un navigateur gratuit et 100 % privé. Bloqueur de traqueurs, HTTPS partout, DNS chiffré et mode Tor intégré. Windows, macOS et Linux.">
+<meta name="theme-color" content="#08050f">
+<meta property="og:title" content="Vipera – Navigue sans laisser de traces">
+<meta property="og:description" content="Gratuit, sans compte, sans télémétrie. Bloqueur intégré, DNS chiffré, mode Tor.">
+<meta property="og:image" content="assets/icon.png">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Vipera, accueil"><img src="assets/icon.png" width="32" height="32" alt="">Vipera</a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#fonctions">Fonctions</a>
+      <a href="#trajet">Le trajet</a>
+      <a href="#comparatif">Comparatif</a>
+      <a href="#installation">Installation</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-v btn-sm" href="#installation" data-download>Télécharger</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= Hero ================= -->
+<section class="hero">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="tag"><i></i>Version <b data-version>1.0.0</b> · Windows, macOS, Linux</span>
+      <h1 data-split>Navigation privée, <span class="grad">sans traces.</span></h1>
+      <p class="lead">Vipera est un navigateur gratuit qui bloque les traqueurs, chiffre les requêtes DNS et n’enregistre <em>rien</em> sur le disque. Le mode Tor est intégré.</p>
+      <div class="cta">
+        <a class="btn btn-v" href="#installation" data-download><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224 144v64a8 8 0 0 1-8 8H40a8 8 0 0 1-8-8v-64a8 8 0 0 1 16 0v56h160v-56a8 8 0 0 1 16 0zm-101.66 5.66a8 8 0 0 0 11.32 0l40-40A8 8 0 0 0 168 96h-32V32a8 8 0 0 0-16 0v64H88a8 8 0 0 0-5.66 13.66z"/></svg><span data-dl-label>Télécharger</span></a>
+        <a class="btn btn-ghost" href="#trajet">Fonctionnalités</a>
+      </div>
+      <ul class="meta">
+        <li><b>0 €</b> pour toujours</li>
+        <li><b>0</b> compte</li>
+        <li><b>0</b> télémétrie</li>
+      </ul>
+    </div>
+
+    <!-- Fenêtre Vipera : boutons macOS en haut à droite -->
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="win" id="win">
+        <div class="win-top">
+          <img class="w-logo" src="assets/icon.png" alt="">
+          <div class="w-tab on"><img src="assets/icon.png" alt="">Recherche privée</div>
+          <div class="w-tab"><img src="assets/icon.png" alt="">wikipedia.org</div>
+          <div class="w-plus">+</div>
+          <div class="w-fill"></div>
+          <div class="lights"><b class="r"></b><b class="y"></b><b class="g"></b></div>
+        </div>
+        <div class="win-bar">
+          <span class="ic">‹</span><span class="ic">›</span><span class="ic">↻</span>
+          <div class="url"><svg viewBox="0 0 16 16"><rect x="3.5" y="7" width="9" height="6.5" rx="1.6"/><path d="M5.5 7V5.2a2.5 2.5 0 0 1 5 0V7"/></svg>https://duckduckgo.com<span class="sh"><svg viewBox="0 0 16 16"><path d="M8 1.5l5.5 2v4c0 3.2-2.2 5.6-5.5 7-3.3-1.4-5.5-3.8-5.5-7v-4z"/></svg><b id="mock-count">128</b></span></div>
+          <span class="tor-p"><i></i>Tor actif</span>
+        </div>
+        <div class="win-body">
+          <div class="mock-search"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.2"/><path d="M10.2 10.2L14 14"/></svg>Rechercher sans être suivi…</div>
+          <div class="feed" id="feed"></div>
+        </div>
+      </div>
+      <div class="float f1"><i></i>Traqueur bloqué</div>
+      <div class="float f2">HTTPS forcé</div>
+    </div>
+  </div>
+
+  <div class="wrap"><div class="strip" aria-label="Garanties">
+    <div><b data-count="146" data-suffix="+">0</b><span>domaines de pubs et traqueurs bloqués dès le départ</span></div>
+    <div><b data-count="3" data-suffix="">0</b><span>couches : DNS chiffré, HTTPS, mode Tor</span></div>
+    <div><b data-count="0" data-suffix="">0</b><span>octet d’historique écrit par défaut sur ton disque</span></div>
+    <div><b data-count="100" data-suffix="%">0</b><span>du code lisible et modifiable (licence MIT)</span></div>
+  </div></div>
+</section>
+
+<!-- ================= Fonctions ================= -->
+<section class="sec" id="fonctions">
+  <div class="wrap">
+    <div class="kicker"><b>01</b> Fonctions</div>
+    <h2 class="reveal">Fonctionnalités <span class="dimw">principales.</span></h2>
+    <div class="bento">
+      <article class="card c-wide reveal" data-spot>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v5.5c0 4.6-3.2 8-8 9.5-4.8-1.5-8-4.9-8-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></div>
+        <h3>Bloqueur de traqueurs intégré</h3>
+        <p>Publicités, pixels espions, scripts d’analyse : coupés avant même d’être téléchargés. Le compteur à droite de la barre d’adresse montre ce qui a été arrêté, page par page. Ajoute ta propre liste en déposant un fichier texte.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></div>
+        <h3>Mode Tor</h3>
+        <p>Tout le trafic passe par le réseau Tor. Si Tor tombe, plus rien ne sort : pas de fuite silencieuse.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.4"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></div>
+        <h3>HTTPS partout</h3>
+        <p>Les sites en HTTP sont ouverts en HTTPS. Si un site ne le gère pas, Vipera te prévient avant de continuer.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 8a12 12 0 0 1 16 0M7 11.5a8 8 0 0 1 10 0M10 15a4 4 0 0 1 4 0"/><circle cx="12" cy="18.5" r="1"/></svg></div>
+        <h3>DNS chiffré</h3>
+        <p>Ton fournisseur d’accès ne voit plus la liste des sites que tu visites. Quad9, Cloudflare ou Mullvad au choix.</p>
+      </article>
+      <article class="card c-wide reveal" data-spot>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><path d="M17 15l4 4m0-4l-4 4"/></svg></div>
+        <h3>Zéro trace, par défaut</h3>
+        <p>Pas d’historique, pas de cookies sur le disque, pas de cache : tout vit en mémoire et disparaît à la fermeture. Besoin de rester connecté quelque part ? Active « Garder les données » dans les réglages, et choisis d’effacer à chaque sortie.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3v1.5M15 4a3 3 0 0 1 3 3v1.5M6 8.5C4 10 4 13 6 14.5M18 8.5c2 1.5 2 4.5 0 6"/><path d="M9 20c.5-3 1-5 3-5s2.5 2 3 5"/></svg></div>
+        <h3>Anti-empreinte</h3>
+        <p>Canvas, carte graphique, écran, mémoire : les informations qui servent à te reconnaître sont brouillées ou uniformisées.</p>
+      </article>
+      <article class="card c-wide reveal" data-spot>
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></div>
+        <h3>Recherche respectueuse</h3>
+        <p>DuckDuckGo, Brave Search, Startpage, Qwant, Mojeek ou SearXNG. Jamais de moteur qui te profile imposé.</p>
+      </article>
+      <article class="card c-wide reveal" data-spot>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><circle cx="16.5" cy="8.5" r=".9"/><circle cx="13.7" cy="8.5" r=".9"/><circle cx="19.3" cy="8.5" r=".9"/></svg></div>
+        <h3>Interface moderne</h3>
+        <p>Onglets fluides, recherche dans la page, raccourcis habituels, et les boutons rouge, jaune, vert en haut à droite.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Le trajet ================= -->
+<section class="sec alt" id="trajet">
+  <div class="wrap">
+    <div class="kicker"><b>02</b> Le trajet de tes données</div>
+    <h2 class="reveal">Visibilité <span class="dimw">avec et sans Tor.</span></h2>
+
+    <div class="route reveal" id="route" data-mode="direct">
+      <div class="toggle" role="tablist" aria-label="Mode de connexion">
+        <button role="tab" aria-selected="true" data-m="direct">Connexion normale</button>
+        <button role="tab" aria-selected="false" data-m="tor">Avec le mode Tor</button>
+        <i></i>
+      </div>
+
+      <svg viewBox="0 0 900 270" class="map" role="img" aria-label="Schéma du trajet de la connexion">
+        <defs>
+          <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#c4b5fd"/></linearGradient>
+        </defs>
+        <!-- trajet direct -->
+        <g class="g-direct">
+          <path d="M110 135 H790" class="wire bad"/>
+          <circle r="6" class="pkt bad"><animateMotion dur="2.6s" repeatCount="indefinite" path="M110 135 H790"/></circle>
+          <g class="eye" transform="translate(450 70)"><circle r="20"/><path d="M-9 0c3-6 15-6 18 0-3 6-15 6-18 0z"/><circle r="2.5" class="pup"/></g>
+          <text x="450" y="38" class="lbl bad">Ton fournisseur d’accès voit tout</text>
+          <text x="450" y="188" class="lbl dim">Ton adresse IP réelle est visible</text>
+        </g>
+        <!-- trajet Tor -->
+        <g class="g-tor">
+          <path d="M110 135 L300 70 L470 200 L640 80 L790 135" class="wire good"/>
+          <circle r="6" class="pkt good"><animateMotion dur="4.2s" repeatCount="indefinite" path="M110 135 L300 70 L470 200 L640 80 L790 135"/></circle>
+          <g class="relay"><circle cx="300" cy="70" r="15"/><text x="300" y="34" class="lbl sm">Relais 1</text></g>
+          <g class="relay"><circle cx="470" cy="200" r="15"/><text x="470" y="238" class="lbl sm">Relais 2</text></g>
+          <g class="relay"><circle cx="640" cy="80" r="15"/><text x="640" y="44" class="lbl sm">Relais de sortie</text></g>
+          <text x="450" y="262" class="lbl good">Chaque relais ne connaît que son voisin</text>
+        </g>
+        <!-- extrémités -->
+        <g class="node"><circle cx="110" cy="135" r="30"/><text x="110" y="140" class="lbl icon">Toi</text></g>
+        <g class="node"><circle cx="790" cy="135" r="30"/><text x="790" y="140" class="lbl icon">Site</text></g>
+      </svg>
+
+      <div class="route-notes">
+        <div class="note" data-for="direct">
+          <h3>Sans Tor</h3>
+          <p>Le site voit ton adresse IP. Ton fournisseur d’accès voit où tu te connectes (le DNS chiffré de Vipera lui cache déjà la liste des noms de sites, mais pas les adresses elles-mêmes). Les traqueurs, eux, sont bloqués.</p>
+        </div>
+        <div class="note" data-for="tor">
+          <h3>Avec Tor</h3>
+          <p>Ta connexion rebondit sur trois relais bénévoles, chiffrée en couches. Le site voit l’IP du relais de sortie, pas la tienne. La connexion est plus lente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Comparatif ================= -->
+<section class="sec" id="comparatif">
+  <div class="wrap">
+    <div class="kicker"><b>03</b> Comparatif honnête</div>
+    <h2 class="reveal">Comparatif <span class="dimw">et limites.</span></h2>
+    <div class="table-wrap reveal">
+      <table class="cmp">
+        <thead><tr><th></th><th class="us">Vipera</th><th>Chrome</th><th>Firefox</th><th>Brave</th><th>Navigateur Tor</th></tr></thead>
+        <tbody>
+          <tr><th>Gratuit</th><td class="us y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><th>Bloqueur de pubs intégré</th><td class="us y">✓</td><td class="n">✗</td><td class="p"><span class="part">en partie</span></td><td class="y">✓</td><td class="p"><span class="part">en partie</span></td></tr>
+          <tr><th>Aucun historique par défaut</th><td class="us y">✓</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="y">✓</td></tr>
+          <tr><th>Mode Tor intégré</th><td class="us y">✓</td><td class="n">✗</td><td class="n">✗</td><td class="p"><span class="part">en partie</span></td><td class="y">✓</td></tr>
+          <tr><th>DNS chiffré par défaut</th><td class="us y">✓</td><td class="p"><span class="part">en partie</span></td><td class="p"><span class="part">en partie</span></td><td class="p"><span class="part">en partie</span></td><td class="y">✓</td></tr>
+          <tr><th>Protection anti-empreinte</th><td class="us p"><span class="part">en partie</span></td><td class="n">✗</td><td class="p"><span class="part">en partie</span></td><td class="p"><span class="part">en partie</span></td><td class="y">✓</td></tr>
+          <tr><th>Anonymat fort</th><td class="us p"><span class="part">en partie</span></td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="y">✓</td></tr>
+          <tr><th>Audité, mature, mis à jour par une grande équipe</th><td class="us n">✗</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+        </tbody>
+      </table>
+      <p class="legend"><span><b class="y">✓</b> oui</span><span><b class="p">en partie</b> : option ou protection limitée</span><span><b class="n">✗</b> non</span></p>
+    </div>
+    <p class="honest reveal"><b>À savoir :</b> Vipera est un projet récent, bâti sur Chromium (Electron). Pour un anonymat critique (journalisme, situations à risque), le Navigateur Tor officiel reste la référence. Vipera s’adresse à un usage quotidien : moins de traqueurs, moins de traces, et Tor disponible en un clic.</p>
+  </div>
+</section>
+
+<!-- ================= Installation ================= -->
+<section class="sec alt" id="installation">
+  <div class="wrap">
+    <div class="kicker"><b>04</b> Installation</div>
+    <h2 class="reveal">Installation <span class="dimw">par système.</span></h2>
+
+    <div class="install reveal" id="install">
+      <div class="os-tabs" role="tablist" aria-label="Système d’exploitation">
+        <button role="tab" aria-selected="true" data-os="win">Windows</button>
+        <button role="tab" aria-selected="false" data-os="mac">macOS</button>
+        <button role="tab" aria-selected="false" data-os="linux">Linux</button>
+        <i></i>
+      </div>
+
+      <div class="os-panel" data-os="win">
+        <ol class="steps">
+          <li><b>Télécharge</b> <code>Vipera.Setup.1.0.0.exe</code> depuis la page des versions.</li>
+          <li><b>Double-clique</b> dessus. Si Windows affiche « éditeur inconnu » : <em>Informations complémentaires</em> puis <em>Exécuter quand même</em>. C’est normal, le programme n’est pas signé (la signature coûte cher, Vipera est gratuit).</li>
+          <li><b>Suis l’assistant</b> : dossier d’installation, raccourci bureau, c’est fait. Une version portable (sans installation) est aussi disponible.</li>
+        </ol>
+        <a class="btn btn-v" href="#" data-download data-os="win"><span data-dl-label>Télécharger pour Windows</span></a>
+        <div class="build"><span>Ou compile-le toi-même :</span> double-clique sur <code>install.bat</code> à la racine du projet.</div>
+      </div>
+
+      <div class="os-panel" data-os="mac" hidden>
+        <ol class="steps">
+          <li><b>Télécharge</b> <code>Vipera.dmg</code> depuis la page des versions.</li>
+          <li><b>Ouvre</b> le fichier et glisse Vipera dans Applications.</li>
+          <li><b>Premier lancement :</b> clic droit sur l’app, puis <em>Ouvrir</em>, puis confirme. macOS demande ça pour toute app non signée.</li>
+        </ol>
+        <a class="btn btn-v" href="#" data-download data-os="mac"><span data-dl-label>Télécharger pour macOS</span></a>
+        <div class="build"><span>Ou compile-le :</span> <code class="copy" data-copy="bash install.sh">bash install.sh</code></div>
+      </div>
+
+      <div class="os-panel" data-os="linux" hidden>
+        <ol class="steps">
+          <li><b>AppImage</b> (toutes distributions) : télécharge, puis <code class="copy" data-copy="chmod +x Vipera*.AppImage && ./Vipera*.AppImage">chmod +x Vipera*.AppImage &amp;&amp; ./Vipera*.AppImage</code></li>
+          <li><b>Debian / Ubuntu :</b> <code class="copy" data-copy="sudo apt install ./vipera*.deb">sudo apt install ./vipera*.deb</code></li>
+          <li>Pour le mode Tor, rien à faire : Vipera sait télécharger Tor lui-même, ou utiliser celui déjà installé.</li>
+        </ol>
+        <a class="btn btn-v" href="#" data-download data-os="linux"><span data-dl-label>Télécharger pour Linux</span></a>
+        <div class="build"><span>Ou compile-le :</span> <code class="copy" data-copy="bash install.sh">bash install.sh</code></div>
+      </div>
+    </div>
+
+    <div class="grid-3 reveal">
+      <div class="mini"><h3>Mises à jour</h3><p>Aucune mise à jour automatique en arrière-plan : c’est du réseau en plus. Télécharge la nouvelle version quand tu veux.</p></div>
+      <div class="mini"><h3>Désinstallation</h3><p>Windows : Paramètres, Applications. Les données de Vipera sont supprimées avec lui. Sur macOS et Linux, supprime simplement l’application.</p></div>
+      <div class="mini"><h3>Vérifie le code</h3><p>Le code source est disponible dans le dossier <code>browser/</code> : une trentaine de fichiers, en JavaScript, sans dépendance cachée.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Limites ================= -->
+<section class="sec" id="limites">
+  <div class="wrap">
+    <div class="kicker"><b>05</b> Transparence</div>
+    <h2 class="reveal">Limites <span class="dimw">connues.</span></h2>
+    <div class="limits">
+      <div class="reveal"><h3>Pas d’anonymat parfait</h3><p>Aucun navigateur ne peut le garantir. Si tu te connectes à ton compte personnel, le site sait qui tu es, Tor ou pas.</p></div>
+      <div class="reveal"><h3>Pas de signature ni d’audit</h3><p>Le projet est jeune et n’a pas été audité. Garde-le à jour et traite-le comme un outil au quotidien, pas comme un bouclier absolu.</p></div>
+      <div class="reveal"><h3>Anti-empreinte partielle</h3><p>On brouille les signaux les plus courants. Le Navigateur Tor, lui, uniformise tous ses utilisateurs : il reste plus fort sur ce point.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec alt" id="faq">
+  <div class="wrap faq-wrap">
+    <div>
+      <div class="kicker"><b>06</b> FAQ</div>
+      <h2 class="reveal">Questions <span class="dimw">fréquentes.</span></h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Vipera est-il vraiment gratuit ?</summary><p>Oui, pour toujours : licence MIT, aucune pub, aucun abonnement, aucune version payante cachée. Tu peux même le modifier et le redistribuer.</p></details>
+      <details><summary>Quelle différence avec Brave ou Firefox ?</summary><p>Brave et Firefox sont des navigateurs complets avec une grande équipe derrière. Vipera, c’est une approche « privé d’abord » : rien n’est enregistré par défaut, le DNS est chiffré dès le départ et Tor est intégré à l’interface.</p></details>
+      <details><summary>Est-ce aussi sûr que le Navigateur Tor ?</summary><p>Non. Le Navigateur Tor est conçu pour que tous ses utilisateurs se ressemblent, ce que Vipera ne fait qu’en partie. Vipera cache ton adresse IP via Tor, mais reste un navigateur de tous les jours.</p></details>
+      <details><summary>Que se passe-t-il si Tor se déconnecte ?</summary><p>Rien ne sort. Tant que Tor n’est pas prêt, les pages refusent de se charger au lieu de passer par ta connexion normale. Ce mécanisme évite toute fuite de trafic.</p></details>
+      <details><summary>Mes mots de passe sont-ils enregistrés ?</summary><p>Non, Vipera n’en enregistre aucun. Pour rester connecté entre deux sessions, active « Garder les données » dans les réglages. Utilise un gestionnaire de mots de passe externe pour le reste.</p></details>
+      <details><summary>Pourquoi Windows ou macOS me met en garde ?</summary><p>L’application n’est pas signée numériquement. Les étapes d’installation indiquent comment poursuivre.</p></details>
+      <details><summary>Comment créer les installateurs moi-même ?</summary><p>Windows : double-clic sur <code>install.bat</code>. macOS et Linux : <code>bash install.sh</code>. Ou pousse le projet sur GitHub : le fichier <code>release.yml</code> compile les trois systèmes gratuitement.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA final ================= -->
+<section class="final">
+  <div class="aurora" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap">
+    <img src="assets/icon.png" width="84" height="84" alt="" class="final-ico">
+    <h2 class="reveal">Vipera, navigation privée.</h2>
+    <p class="reveal">Gratuit, ouvert, sans compte.</p>
+    <a class="btn btn-v btn-lg reveal" href="#installation" data-download><span data-dl-label>Télécharger Vipera</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/icon.png" width="26" height="26" alt="">Vipera</a>
+    <p>Ce site n’utilise ni cookie, ni traqueur, ni service externe. Licence MIT.</p>
+    <nav><a href="#fonctions">Fonctions</a><a href="#comparatif">Comparatif</a><a href="#installation">Installation</a><a href="#faq">FAQ</a></nav>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
